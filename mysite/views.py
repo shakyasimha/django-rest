@@ -1,10 +1,17 @@
 from django.shortcuts import render
-from django.http import Http404
-from rest_framework import status
-from rest_framework.views import APIView
-from rest_framework.response import Response 
+from rest_framework import generics
 
 from .models import Books
 from .serializers import BookSerializer
 
 # Create your views here.
+
+# For listing and creating -> LC
+class BookLCView(generics.ListCreateAPIView):
+    queryset = Books.objects.all()
+    serializer_class = BookSerializer
+
+# For retrieving, updating and deleting/destroying -> RUD
+class BookRUDView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Books.objects.all()
+    serializer_class = BookSerializer
