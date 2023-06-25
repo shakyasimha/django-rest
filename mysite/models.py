@@ -3,11 +3,10 @@ from django.utils import timezone
 
 # Create your models here.
 class Author(models.Model):
-    # f_name = first name, l_name = last name
     id = models.AutoField(primary_key=True)
     f_name = models.CharField(max_length=256, null=False)
     l_name = models.CharField(max_length=256, null=False)
-    date_of_birth = models.DateField(default=timezone.now().date())
+    date_of_birth = models.DateField(null=True)
     nationality = models.CharField(max_length=256, null=True)
 
     class Meta:
@@ -15,19 +14,11 @@ class Author(models.Model):
 
 
 class Publisher(models.Model):
-    """
-        columns:
-            - id (primary key)
-            - publisher name -> pub_name
-            - country 
-            - city 
-            - estd -> established date
-    """
     id = models.AutoField(primary_key=True)
     pub_name = models.CharField(max_length=256, null=False)
     country  = models.CharField(max_length=256, null=False)
     city = models.CharField(max_length=256, null=True)
-    estd = models.DateField(default=timezone.now().date(), null=True)
+    estd = models.IntegerField(null=True)
 
 
 class Books(models.Model):
