@@ -14,7 +14,7 @@ class BookListView(generics.ListAPIView):
     queryset = Books.objects.all()
     serializer_class = BookSerializer
 
-class BookRetrieveView(generics.RetrieveAPIView):
+class BookDetailView(generics.RetrieveAPIView):
     queryset = Books.objects.all()
     serializer_class = BookSerializer
 
@@ -24,7 +24,7 @@ class AuthorListView(generics.ListAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer 
 
-class AuthorRetrieveView(generics.RetrieveAPIView):
+class AuthorDetailView(generics.RetrieveAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
 
@@ -34,6 +34,6 @@ class PublisherListView(generics.ListAPIView):
     queryset = Publisher.objects.all()
     serializer_class = PublisherSerializer
 
-class PublisherRetrieveView(generics.RetrieveAPIView):
+class PublisherDetailView(generics.RetrieveAPIView):
     queryset = Publisher.objects.all()
     serializer_class = PublisherSerializer

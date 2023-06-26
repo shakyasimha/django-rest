@@ -4,7 +4,7 @@ from django.utils import timezone
 # Create your models here.
 class Author(models.Model):
     id = models.AutoField(primary_key=True)
-    f_name = models.CharField(max_length=256, null=False)
+    f_name = models.CharField(max_length=256, null=True)
     l_name = models.CharField(max_length=256, null=False)
     date_of_birth = models.DateField(null=True)
     nationality = models.CharField(max_length=256, null=True)
