@@ -17,15 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-from mysite import views 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('books/', views.BookListView.as_view()),
-    path('books/<int:pk>/', views.BookDetailView.as_view()),
-    path('author/', views.AuthorListView.as_view()),
-    path('author/<int:pk>/', views.AuthorDetailView.as_view()),
-    path('publisher/', views.PublisherListView.as_view()),
-    path('publisher/<int:pk>/', views.PublisherDetailView.as_view()),
     path('api-auth/', include('mysite.urls'))
 ]

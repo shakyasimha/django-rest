@@ -8,7 +8,14 @@ values
 ('Friedrich', 'Nietzsche', '1844-10-15', 'Prussian'),
 ('', 'Osho', '1931-12-11', 'Indian'),
 ('Robert', 'Kiyosaki', '1947-04-08', 'American'),
-('Niccolo', 'Machiavelli', '1469-05-03', 'Italian');
+('Niccolo', 'Machiavelli', '1469-05-03', 'Italian'),
+('Arthur', 'Schopenhauer', '1788-02-22', 'Prussian'),
+('George Wilhelm Friedrich', 'Hegel', '1770-08-27', 'Prussian'),
+('Carl Gustav', 'Jung', '1875-07-26', 'Swiss'),
+('Sigmund', 'Freud', '1856-05-06', 'Swiss'),
+('Vladimir', 'Lenin', '1870-04-22', 'Russian'),
+('Joseph', 'Stalin', '1878-12-18', 'Russian'),
+('Zedong', 'Mao', '1893-12-26', 'Chinese');
 
 -- Inserting publisher info
 insert into  mysite_publisher(pub_name, country, city, estd)

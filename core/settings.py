@@ -44,6 +44,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Additional installed apps
+    'rest_framework',
+
     # My apps
     'mysite.apps.MysiteConfig'
 ]

@@ -11,7 +11,7 @@ class AuthorSerializer(serializers.ModelSerializer):
         fields = ['author_name', 'nationality', 'date_of_birth']
 
     def get_author_name(self, obj):
-        return f'{obj.last_name}, {obj.first_name}'
+        return f'{obj.l_name}, {obj.f_name}'
     
 
 # Serializer class for Publisher
