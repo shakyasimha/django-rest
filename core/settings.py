@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # My apps
-    'mysite.apps.MysiteConfig'
+    'bookstore.apps.BookstoreConfig'
 ]
 
 MIDDLEWARE = [
